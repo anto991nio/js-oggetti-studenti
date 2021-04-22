@@ -8,7 +8,7 @@ var student = {
     "età": 29
 };
 
-
+var listStudent = document.getElementById("listStudents");
 
 // Con il ciclo for in stampiamo le proprietà dell'oggetto
 
@@ -44,13 +44,36 @@ var classRoom = [{
 
 //con un ciclo faccio stampare il nome e il cognome
 
-for (var i=0 ; classRoom.length ; i++){
+for (var i = 0 ; i < classRoom.length ; i++){
 
     var element = classRoom[i];
 
-
+    listStudent.innerHTML += "<li>" + element.nome + " " + element.cognome + "</li>"
     console.log(element.nome);
     console.log(element.cognome);
 
 
 }
+
+//terza parte
+// Chiediamo all'utente di far inserire i dati da inserire in un oggetto
+
+var newStudent = {}
+
+
+var userName = prompt("Inserisci il tuo nome");
+var userSurname = prompt("Inserisci il tuo Cognome");
+var userAge = prompt("Inserisci la tua età");
+
+
+newStudent.nome = userName;
+newStudent.cognome = userSurname;
+newStudent.età = userAge;
+
+
+console.log(newStudent);
+
+
+
+
+
